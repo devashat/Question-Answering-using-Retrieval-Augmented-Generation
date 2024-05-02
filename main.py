@@ -30,7 +30,7 @@ Global variables to reference in the code
 k_value=3
 chunk_size=1000
 chunk_overlap=200
-hf_token = "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"
+hf_token = ""
 
 
 '''
