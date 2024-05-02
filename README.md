@@ -13,9 +13,7 @@ This project entails three parts:
 - `val_questions.csv`: The notebook used to develop the model and code for the project
 - `main.py`: The python file that contains the final code for the project. It contains an argparse mechanism that can be used to train and test the model. Sample usage of argparse for this code is defined below in the **Sample Run Commands** section.
 - `requirements.txt`: Contains the list of require packages to set up an adequate environment for the project.
-- `predictions_no_rag.csv`: Answer predictions for `questions.csv` with no RAG.
-- `predictions_rag.csv`: Answer predictions for `questions.csv` with RAG and without LangChain.
-- `predictions_rag_langchain.csv`: Answer predictions for `questions.csv` with RAG and LangChain.
+- `score.py`: Scoring script
 
 ## Setup
 
@@ -41,5 +39,10 @@ python main.py --questions ./data/val_questions.csv --rag --langchain --passages
 
 # Run with RAG (with custom embeddings)
 python main.py --questions ./data/val_questions.csv --rag --passages ./data/passages.csv --output val_rag.csv
+
+# Checking Validation Scores
+python score.py --golds /path/to/val_questions.csv --preds /path/to/preds.csv
+
+
 ```
 
